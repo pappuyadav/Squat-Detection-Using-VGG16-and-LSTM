@@ -1,0 +1,17 @@
+# Use this section to create pose detect. Make sure to use right video files in .avi format  
+!cd openpose && ./build/examples/openpose/openpose.bin --video ../sq2.avi --write_json ./output/ --display 0  --write_video ../openpose_sq2.avi
+# convert the result into MP4. keep changing .avi file name based on video file name
+!ffmpeg -y -loglevel info -i openpose_sq2.avi output_sq2.mp4
+
+
+# Visualize the result
+def pose_video(file_name, width=640, height=480):
+    import io
+    import base64
+    from IPython.display import HTML
+    video_encoded = base64.b64encode(io.open(file_name, 'rb').read())
+    return HTML(data='''<video width="{0}" height="{1}" alt="test" controls>
+                        <source src="data:video/mp4;base64,{2}" type="video/mp4" />
+                      </video>'''.format(width, height, video_encoded.decode('ascii')))
+
+pose_video('output_sq2.mp4', width=960, height=720)
