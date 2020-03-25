@@ -1,0 +1,6 @@
+#Please make two directories to put training image frames and test image frames
+#First half of training image frames consist of non-squat and remaining half consists of squat frames
+#100 training images of non-squat frames and 90 images of squat frames
+#16 test image frames randomly chosen. 7 from non-squat and 9 from squat
+!mkdir train
+!mkdir test
