@@ -1,0 +1,5 @@
+#Generating Keypoints and zipping them in a folder so as to download
+#This will be used when implementing LSTM
+from google.colab import files
+!zip -r keypoints.zip /content/openpose/output
+files.download('keypoints.zip')
