@@ -1,0 +1,6 @@
+
+#Zipping image frames in a folder and downloading them so that required image frames can be used for evaluating the trained model model
+
+from google.colab import files
+!zip -r newtestframes.zip /content/frames
+files.download('newtestframes.zip')
