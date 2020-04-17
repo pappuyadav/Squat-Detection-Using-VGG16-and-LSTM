@@ -1,0 +1,5 @@
+#Zipping header and json files from trained model and downloading them
+
+from google.colab import files
+!zip -r frames.zip /content/frames
+files.download('frames.zip')
