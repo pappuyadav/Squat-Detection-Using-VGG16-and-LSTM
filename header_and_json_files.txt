@@ -1,0 +1,7 @@
+#Zipping header and json files from trained model and downloading them
+
+from google.colab import files
+!zip -r trained_data_header.zip /content/trained_data_squats.h5
+!zip -r trained_data_json.zip /content/trained_data_squats.json
+files.download('trained_data_header.zip')
+files.download('trained_data_json.zip')
