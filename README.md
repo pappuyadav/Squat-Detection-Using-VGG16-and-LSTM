@@ -13,5 +13,5 @@ Now we are ready to train and validate the model. Use the file "squat_detect_vgg
 Finally, these trained model nad trained weight files are zipped and downloaded using the code in file "header_and_json_files.txt".
 Eventually, one can simply use these trained model and weights to test on his/her custom video data set. For this one can simply use the file "model_evaluate.py". However, in order to use this, one has to first create video frames from his/her video data following the above procedure for generating video frames and then create a new folder "newtest' using "!mkdir newtest" and again create randomly chosen 16 images for model evaluation where first 7 frames belong to "no squat" and remaining 9 frames belong to "squat". 
 
-
+Please use "squat_detect_latest_keypoints_to_LSTM.ipynb" to detect squat video frames using OpenPose Keypoints (25 keypoints) with an LSTM network.
 
